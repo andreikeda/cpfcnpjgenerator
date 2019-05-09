@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CpfCnpjGenerator</string>
+
+    <string name="btn_cnpj">GERAR CNPJ</string>
+    <string name="btn_cpf">GERAR CPF</string>
+
+    <string name="text_description">Aplicação para gerar CPF ou CNPJ.\nSelecione o tipo de documento que será gerado de forma aleatória através dos botões.</string>
+</resources>

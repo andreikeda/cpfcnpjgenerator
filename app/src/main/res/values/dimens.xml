@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_main_height">0.6</dimen>
+    <dimen name="activity_horizontal_guideline">16dp</dimen>
+    <dimen name="activity_vertical_guideline">16dp</dimen>
+</resources>
