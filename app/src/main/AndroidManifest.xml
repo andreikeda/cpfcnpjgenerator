@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".cpf.view.CpfActivity"/>
+        <activity android:name=".cnpj.view.CnpjActivity"/>
     </application>
 
 </manifest>

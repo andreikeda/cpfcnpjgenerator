@@ -1,5 +1,6 @@
 package br.com.andreikeda.cpfcnpjgenerator.main.presenter
 
+import br.com.andreikeda.cpfcnpjgenerator.DocumentObject
 import br.com.andreikeda.cpfcnpjgenerator.main.contract.MainContract
 
 /**
@@ -10,6 +11,11 @@ import br.com.andreikeda.cpfcnpjgenerator.main.contract.MainContract
  *
  */
 class MainPresenterImpl(var view: MainContract.View?) : MainContract.Presenter {
+    override fun onActivityStarted() {
+        view?.setCnpjText(DocumentObject.getCnpjString())
+        view?.setCpfText(DocumentObject.getCpfString())
+    }
+
     override fun onCpfClicked() {
         view?.goToCpfScreen()
     }

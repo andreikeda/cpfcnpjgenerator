@@ -9,6 +9,8 @@ package br.com.andreikeda.cpfcnpjgenerator.main.contract
  */
 interface MainContract {
     interface Presenter {
+        fun onActivityStarted()
+
         fun onCpfClicked()
 
         fun onCnpjClicked()
@@ -17,6 +19,10 @@ interface MainContract {
     }
 
     interface View {
+        fun setCnpjText(text: String)
+
+        fun setCpfText(text: String)
+
         fun goToCpfScreen()
 
         fun goToCnpjScreen()

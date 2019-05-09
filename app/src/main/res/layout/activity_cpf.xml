@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                              xmlns:app="http://schemas.android.com/apk/res-auto"
-                                             xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
-                                             android:layout_height="match_parent"
-                                             tools:context=".main.view.MainActivity">
+                                             android:layout_height="match_parent">
 
     <android.support.constraint.Guideline
         android:id="@+id/guide_start"
@@ -25,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="@dimen/activity_main_height"/>
+        app:layout_constraintGuide_begin="@dimen/activity_vertical_guideline"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/guide_bottom"
@@ -34,31 +32,40 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_end="@dimen/activity_vertical_guideline"/>
 
+    <EditText
+        android:id="@+id/et_cpf_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/guide_end"
+        app:layout_constraintStart_toEndOf="@id/guide_start"
+        app:layout_constraintTop_toBottomOf="@id/guide_top"/>
+
     <TextView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center_horizontal|bottom"
-        android:text="@string/text_description"
-        app:layout_constraintEnd_toStartOf="@id/guide_end"
-        app:layout_constraintHeight_percent="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide_start"/>
-
-    <Button
-        android:id="@+id/btn_cpf"
-        android:layout_width="0dp"
+        android:id="@+id/tv_cpf_feedback"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@id/guide_end"
         app:layout_constraintStart_toEndOf="@id/guide_start"
-        app:layout_constraintTop_toBottomOf="@id/guide_top"
-        app:layout_constraintWidth_percent="0.5"/>
+        app:layout_constraintTop_toBottomOf="@id/et_cpf_input"/>
 
     <Button
-        android:id="@+id/btn_cnpj"
+        android:id="@+id/btn_validate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@id/guide_end"
+        android:text="@string/btn_validate"
+        app:layout_constraintEnd_toStartOf="@+id/btn_generate"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@id/guide_start"
-        app:layout_constraintTop_toBottomOf="@id/btn_cpf"
-        app:layout_constraintWidth_percent="0.5"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_cpf_feedback"/>
+
+    <Button
+        android:id="@+id/btn_generate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_generate"
+        app:layout_constraintEnd_toStartOf="@id/guide_end"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/btn_validate"
+        app:layout_constraintTop_toBottomOf="@id/tv_cpf_feedback"/>
 
 </android.support.constraint.ConstraintLayout>
