@@ -1,6 +1,6 @@
 package br.com.andreikeda.cpfcnpjgenerator.main.presenter
 
-import br.com.andreikeda.cpfcnpjgenerator.DocumentObject
+import br.com.andreikeda.cpfcnpjgenerator.document.`object`.DocumentObject
 import br.com.andreikeda.cpfcnpjgenerator.main.contract.MainContract
 
 /**

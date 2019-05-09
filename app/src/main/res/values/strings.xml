@@ -5,6 +5,8 @@
     <string name="btn_generate_formatted">GERAR %s</string>
     <string name="btn_validate">VALIDAR</string>
 
+    <string name="checkbox_mask">Formatar documento</string>
+
     <string name="hint_document">Digite o %s para validar</string>
 
     <string name="text_description">Aplicação para gerar CPF ou CNPJ.\nSelecione o tipo de documento que será gerado de forma aleatória através dos botões.</string>

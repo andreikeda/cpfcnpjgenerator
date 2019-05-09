@@ -1,11 +1,10 @@
 package br.com.andreikeda.cpfcnpjgenerator.main.view
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import br.com.andreikeda.cpfcnpjgenerator.R
-import br.com.andreikeda.cpfcnpjgenerator.cnpj.view.CnpjActivity
-import br.com.andreikeda.cpfcnpjgenerator.cpf.view.CpfActivity
+import br.com.andreikeda.cpfcnpjgenerator.buildCnpjIntent
+import br.com.andreikeda.cpfcnpjgenerator.buildCpfIntent
 import br.com.andreikeda.cpfcnpjgenerator.main.contract.MainContract
 import br.com.andreikeda.cpfcnpjgenerator.main.presenter.MainPresenterImpl
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,11 +14,11 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     private var mPresenter: MainContract.Presenter? = null
 
     override fun goToCpfScreen() {
-        startActivity(Intent(this, CpfActivity::class.java))
+        startActivity(buildCpfIntent())
     }
 
     override fun goToCnpjScreen() {
-        startActivity(Intent(this, CnpjActivity::class.java))
+        startActivity(buildCnpjIntent())
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

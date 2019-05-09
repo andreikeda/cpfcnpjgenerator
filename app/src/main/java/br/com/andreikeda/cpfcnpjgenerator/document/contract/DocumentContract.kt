@@ -1,4 +1,4 @@
-package br.com.andreikeda.cpfcnpjgenerator.cpf.contract
+package br.com.andreikeda.cpfcnpjgenerator.document.contract
 
 /**
  * @author cin_alima
@@ -7,8 +7,10 @@ package br.com.andreikeda.cpfcnpjgenerator.cpf.contract
  *          $Id: $
  *
  */
-public interface CpfContract {
+public interface DocumentContract {
     interface Presenter {
+        fun onCheckTextWatcherChanged(isChecked: Boolean)
+
         fun onGenerateButtonClicked()
 
         fun onValidateButtonClicked(text: String)
@@ -17,7 +19,11 @@ public interface CpfContract {
     }
 
     interface View {
+        fun addTextWatcher()
+
         fun hideFeedbackMessage()
+
+        fun removeTextWatcher()
 
         fun showDocumentGenerated(text: String)
 

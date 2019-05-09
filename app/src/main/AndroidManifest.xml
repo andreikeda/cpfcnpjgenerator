@@ -16,8 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".cpf.view.CpfActivity"/>
-        <activity android:name=".cnpj.view.CnpjActivity"/>
+        <activity android:name=".document.view.DocumentActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.view.MainActivity"/>
+        </activity>
+        <activity android:name=".cnpj.view.CnpjActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.view.MainActivity"/>
+        </activity>
     </application>
 
 </manifest>

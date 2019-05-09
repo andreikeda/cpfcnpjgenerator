@@ -33,39 +33,51 @@
         app:layout_constraintGuide_end="@dimen/activity_vertical_guideline"/>
 
     <EditText
-        android:id="@+id/et_cpf_input"
+        android:id="@+id/et_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_guideline"
         app:layout_constraintEnd_toStartOf="@id/guide_end"
         app:layout_constraintStart_toEndOf="@id/guide_start"
         app:layout_constraintTop_toBottomOf="@id/guide_top"/>
 
+    <CheckBox
+        android:id="@+id/cb_mask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_guideline"
+        android:text="@string/checkbox_mask"
+        app:layout_constraintStart_toEndOf="@id/guide_start"
+        app:layout_constraintTop_toBottomOf="@id/et_input"/>
+
     <TextView
-        android:id="@+id/tv_cpf_feedback"
+        android:id="@+id/tv_feedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@id/guide_end"
         app:layout_constraintStart_toEndOf="@id/guide_start"
-        app:layout_constraintTop_toBottomOf="@id/et_cpf_input"/>
+        app:layout_constraintTop_toBottomOf="@id/cb_mask"/>
 
     <Button
         android:id="@+id/btn_validate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_guideline"
         android:text="@string/btn_validate"
         app:layout_constraintEnd_toStartOf="@+id/btn_generate"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@id/guide_start"
-        app:layout_constraintTop_toBottomOf="@id/tv_cpf_feedback"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_feedback"/>
 
     <Button
         android:id="@+id/btn_generate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_guideline"
         android:text="@string/btn_generate"
         app:layout_constraintEnd_toStartOf="@id/guide_end"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@id/btn_validate"
-        app:layout_constraintTop_toBottomOf="@id/tv_cpf_feedback"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_feedback"/>
 
 </android.support.constraint.ConstraintLayout>
